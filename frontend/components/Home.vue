@@ -3,17 +3,17 @@
 </template>
 
 <script lang="ts">
-export default {
-  mounted() {
-    console.log('mounted');
-    this.fetchResults();
-  },
-  methods: {
-    async fetchResults() {
-      let res = await this.$axios.$get('/api/test')
-      console.log(res);
+import { defineComponent, computed, ref, onMounted, onUpdated, onUnmounted, useContext } from '@nuxtjs/composition-api';
+
+export default defineComponent({
+  setup () {
+    const { $axios }: any = useContext()
+    async function fetchResults (): Promise<void> {
+      const res: any = await $axios.$get('/api/test')
+      console.log(res)
     }
+    onMounted(fetchResults)
   }
-}
+})
 
 </script>
