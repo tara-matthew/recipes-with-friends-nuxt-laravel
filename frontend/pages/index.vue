@@ -1,13 +1,41 @@
 <template>
-  <HomeCard />
+  <home-card-grid :home-cards="homeCards" />
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import HeaderBar from '~/components/atoms/HeaderBar/HeaderBar.vue'
-import HomeCard from "~/components/molecules/HomeCard/HomeCard.vue";
+import Vue from 'vue';
+import HomeCardGrid from '~/components/organisms/HomeCardGrid/HomeCardGrid.vue';
 
 export default Vue.extend({
-  components: {HomeCard, HeaderBar }
-})
+    components: { HomeCardGrid },
+    setup () {
+        const homeCards: object = [
+            {
+                title: 'First card',
+                items: [
+                    'an item',
+                    'another item'
+                ]
+            },
+            {
+                title: 'Second card',
+                items: [
+                    'second card item',
+                    'another second card item'
+                ]
+            },
+            {
+                title: 'Third card',
+                items: [
+                    'third card item',
+                    'another third card item'
+                ]
+            }
+        ];
+
+        return {
+            homeCards
+        };
+    }
+});
 </script>
