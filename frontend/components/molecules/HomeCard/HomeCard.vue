@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="border-t-2 border-l-2 border-r-2 border-b-2 border-black h-full">
         <div class="border-b-2 border-black h-12 flex items-center justify-center">
             <header-bar :title="title" />
         </div>

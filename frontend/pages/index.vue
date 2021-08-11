@@ -1,5 +1,5 @@
 <template>
-  <home-card-grid :home-cards="homeCards" />
+    <home-card-grid :home-cards="homeCards" />
 </template>
 
 <script lang="ts">
@@ -29,6 +29,13 @@ export default Vue.extend({
                 items: [
                     'third card item',
                     'another third card item'
+                ]
+            },
+            {
+                title: 'Fourth card',
+                items: [
+                    'fourth card item',
+                    'another fourth card item'
                 ]
             }
         ];

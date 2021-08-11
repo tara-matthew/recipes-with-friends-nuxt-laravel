@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, ref, onMounted, onUpdated, onUnmounted, useContext, Data } from '@nuxtjs/composition-api';
+import { defineComponent, onMounted, Data } from '@nuxtjs/composition-api';
 
 export default defineComponent({
     props: {
